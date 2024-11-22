@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <title>Ubah Menjadi grayscale</title>
+    <link rel="stylesheet" href="gri.css" />
+    <link rel="javascript" href="gri.jss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <h1 class="logo">Grayscale Converter</h1>
+      <div class="link">
+        <a>Home</a>
+        <a>About</a>
+      </div>
+    </div>
+
+    <div class="header">
+      <h1 class="judul">Convert Photo to Black and White <br />Image</h1>
+      <h2 class="subjudul">Easily Convert Your Photo to Grayscale</h2>
+      <p class="deskripsi">
+        Accepted image format : PNG, JPEG, JPG. Choose file your image to begin.
+      </p>
+    </div>
+    <div class="canvas-container">
+      <canvas id="can"></canvas>
+      <button id="gs-btn" class="button" onclick="gri()">Buat Grayscale</button>
+    </div>
+
+    <div class="input-container">
+      <div class="drag-area">
+        <div class="icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+        <header>Drag & Drop to Upload file</header>
+        <span>OR</span>
+        <button id="btn" class="button">Browse a file</button>
+        <input
+          type="file"
+          multiple="false"
+          accept="image/*"
+          id="finput"
+          onchange="onupload()"
+          hidden
+        />
+      </div>
+    </div>
+
+    <div class="contoh-container">
+      <h1 class="contoh">Contoh Gambar</h1>
+      <div class="contoh-card-container">
+        <div class="card">
+          <img src="kucing.jpg" alt="kucing" width="700px" />
+          <p class="text-card">Before</p>
+        </div>
+        <div class="card">
+          <img src="download.png" alt="kucing" width="700px" />
+          <p class="text-card">After</p>
+        </div>
+      </div>
+    </div>
+
+    <!--     
+      <input
+        type="file"
+        
+        onchange="onupload()"
+      />
+
+      
+    </p> -->
+
+    <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+    <script src="gri.js"></script>
+  </body>
+</html>
